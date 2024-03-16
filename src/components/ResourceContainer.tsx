@@ -17,7 +17,9 @@ const ResourceContainer = ({ resources }: ResourceContainerProps) => {
     <div>
       <h1>The resource container</h1>
       {resources.map((res) => (
-        <article>{res.title}</article>
+        <article>
+          <h2 className="text-white">{res.title}</h2>
+        </article>
       ))}
     </div>
   );

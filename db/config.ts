@@ -5,6 +5,7 @@ const Resource = defineTable({
     link: column.text(),
     category: column.text(),
     title: column.text(),
+    imgSrc: column.text(),
     id: column.number(),
   },
 });
