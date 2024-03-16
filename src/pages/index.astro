@@ -1,12 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
+import ResourceContainer from "../components/ResourceContainer";
 
 import { db, Resource } from "astro:db";
 
 const resources = await db.select().from(Resource);
+
+interface Props {
+  link: string;
+  category: string;
+  title: string;
+  id: number;
+}
+[];
 ---
 
 <Layout title="Fighting Game Resources Ughara">
   <Hero />
+  <ResourceContainer client:load resources={resources} />
 </Layout>
