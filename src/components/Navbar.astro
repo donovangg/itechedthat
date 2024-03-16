@@ -1,0 +1,23 @@
+---
+import MaxWidthWrapper from "./MaxWidthWrapper.astro";
+---
+
+<nav
+  class="sticky h-14 inset-x-0 z-30 w-full border-b border-gray-300 backdrop-blur-lg transition-all"
+>
+  <MaxWidthWrapper>
+    <div
+      class="flex h-14 items-center justify-between border-b border-zinc-200"
+    >
+      <a href="/" class="flex z-40 font-semibold"> Ughara </a>
+      {/* Links */}
+      <div class="hidden items-center space-x-4 sm:flex">
+        <>
+          <a href="/biscuits"> About </a>
+          <a href="/biscuits"> About </a>
+          <a href="/biscuits"> Submit &rarr; </a>
+        </>
+      </div>
+    </div>
+  </MaxWidthWrapper>
+</nav>
