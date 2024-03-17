@@ -7,6 +7,7 @@ interface ResourceProps {
   title: string;
   id: number;
   imgSrc: string;
+  description: string;
 }
 
 interface ResourceContainerProps {
@@ -54,8 +55,8 @@ const ResourceContainer = ({ resources }: ResourceContainerProps) => {
       <div className="border-2 max-w-screen-2xl mx-auto flex gap-2">
         {/* Filter buttons */}
         <button
-          className={`group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg bg-zinc-900 ${
-            selectedCategory == "All" ? "bg-white text-zinc-950" : ""
+          className={`group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg  ${
+            selectedCategory == "All" ? "bg-white text-zinc-900" : "bg-zinc-900"
           } px-6 font-medium text-neutral-200`}
           onClick={() => handleCategoryChange("All")}
         >
@@ -66,8 +67,10 @@ const ResourceContainer = ({ resources }: ResourceContainerProps) => {
         {Array.from(new Set(resources.map((res) => res.category))).map(
           (category) => (
             <button
-              className={`group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg bg-zinc-900 ${
-                category == selectedCategory ? "bg-white text-zinc-950" : ""
+              className={`group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-lg ${
+                category == selectedCategory
+                  ? "bg-white text-zinc-900"
+                  : "bg-zinc-900 "
               } px-6 font-medium text-neutral-200`}
               key={category}
               onClick={() => handleCategoryChange(category)}
@@ -84,13 +87,7 @@ const ResourceContainer = ({ resources }: ResourceContainerProps) => {
         // Conditional rendering based on isLoading state
         <p>Loading...</p>
       ) : (
-        <section>
-          {/* {filteredResources.map((res) => (
-            <article key={res.id}>
-              {" "}
-              <h2 className="text-white">{res.title}</h2>
-            </article>
-          ))} */}
+        <section className="border-2 min-h-[800px] border-red-500 max-w-screen-2xl mx-auto grid justify-items-center  grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           {filteredResources.map((res) => (
             <ResourceCard
               key={res.id}
@@ -99,6 +96,7 @@ const ResourceContainer = ({ resources }: ResourceContainerProps) => {
               link={res.link}
               category={res.category}
               imgSrc={res.imgSrc}
+              description={res.description}
             />
           ))}
         </section>

@@ -9,6 +9,7 @@ const Resource = defineTable({
     category: column.text(),
     title: column.text(),
     imgSrc: column.text(),
+    description: column.text(),
   },
 });
 

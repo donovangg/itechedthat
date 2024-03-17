@@ -10,6 +10,8 @@ export default async function seed() {
       imgSrc:
         "https://qczsiistziidnaavyrgw.supabase.co/storage/v1/object/sign/players/mago-san.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwbGF5ZXJzL21hZ28tc2FuLnBuZyIsImlhdCI6MTcxMDU3MTc0MCwiZXhwIjoxNzQyMTA3NzQwfQ.gJHiKEQq8Zi9lHzbPknqIkYgp_AJMkbsTAbwWdqEfWA&t=2024-03-16T06%3A49%3A00.087Z",
       id: 1,
+      description:
+        "I'm Mago san Kenryo  Hayashi is a Japanese Fighting Games player currently representing GyoGun.",
     },
     {
       link: "https://replaytheater.app/?game=unib",
@@ -18,6 +20,8 @@ export default async function seed() {
       imgSrc:
         "https://qczsiistziidnaavyrgw.supabase.co/storage/v1/object/sign/players/mago-san.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwbGF5ZXJzL21hZ28tc2FuLnBuZyIsImlhdCI6MTcxMDU3MTc0MCwiZXhwIjoxNzQyMTA3NzQwfQ.gJHiKEQq8Zi9lHzbPknqIkYgp_AJMkbsTAbwWdqEfWA&t=2024-03-16T06%3A49%3A00.087Z",
       id: 2,
+      description:
+        "I'm Mago san Kenryo  Hayashi is a Japanese Fighting Games player currently representing GyoGun.",
     },
     {
       link: "https://replaytheater.app/?game=unib",
@@ -26,6 +30,8 @@ export default async function seed() {
       imgSrc:
         "https://qczsiistziidnaavyrgw.supabase.co/storage/v1/object/sign/players/mago-san.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwbGF5ZXJzL21hZ28tc2FuLnBuZyIsImlhdCI6MTcxMDU3MTc0MCwiZXhwIjoxNzQyMTA3NzQwfQ.gJHiKEQq8Zi9lHzbPknqIkYgp_AJMkbsTAbwWdqEfWA&t=2024-03-16T06%3A49%3A00.087Z",
       id: 3,
+      description:
+        "I'm Mago san Kenryo  Hayashi is a Japanese Fighting Games player currently representing GyoGun.",
     },
     {
       link: "https://replaytheater.app/?game=unib",
@@ -34,6 +40,8 @@ export default async function seed() {
       imgSrc:
         "https://qczsiistziidnaavyrgw.supabase.co/storage/v1/object/sign/players/mago-san.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwbGF5ZXJzL21hZ28tc2FuLnBuZyIsImlhdCI6MTcxMDU3MTc0MCwiZXhwIjoxNzQyMTA3NzQwfQ.gJHiKEQq8Zi9lHzbPknqIkYgp_AJMkbsTAbwWdqEfWA&t=2024-03-16T06%3A49%3A00.087Z",
       id: 4,
+      description:
+        "I'm Mago san Kenryo  Hayashi is a Japanese Fighting Games player currently representing GyoGun.",
     },
     {
       link: "https://replaytheater.app/?game=unib",
@@ -42,6 +50,8 @@ export default async function seed() {
       imgSrc:
         "https://qczsiistziidnaavyrgw.supabase.co/storage/v1/object/sign/players/mago-san.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwbGF5ZXJzL21hZ28tc2FuLnBuZyIsImlhdCI6MTcxMDU3MTc0MCwiZXhwIjoxNzQyMTA3NzQwfQ.gJHiKEQq8Zi9lHzbPknqIkYgp_AJMkbsTAbwWdqEfWA&t=2024-03-16T06%3A49%3A00.087Z",
       id: 5,
+      description:
+        "I'm Mago san Kenryo  Hayashi is a Japanese Fighting Games player currently representing GyoGun.",
     },
     {
       link: "https://replaytheater.app/?game=unib",
@@ -50,6 +60,8 @@ export default async function seed() {
       imgSrc:
         "https://qczsiistziidnaavyrgw.supabase.co/storage/v1/object/sign/players/mago-san.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwbGF5ZXJzL21hZ28tc2FuLnBuZyIsImlhdCI6MTcxMDU3MTc0MCwiZXhwIjoxNzQyMTA3NzQwfQ.gJHiKEQq8Zi9lHzbPknqIkYgp_AJMkbsTAbwWdqEfWA&t=2024-03-16T06%3A49%3A00.087Z",
       id: 6,
+      description:
+        "I'm Mago san Kenryo  Hayashi is a Japanese Fighting Games player currently representing GyoGun.",
     },
   ]);
 }
