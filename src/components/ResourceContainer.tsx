@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import ResourceCard from "./ResourceCard";
 
 interface ResourceProps {
   link: string;
   category: string;
   title: string;
   id: number;
+  imgSrc: string;
 }
 
 interface ResourceContainerProps {
@@ -82,14 +84,24 @@ const ResourceContainer = ({ resources }: ResourceContainerProps) => {
         // Conditional rendering based on isLoading state
         <p>Loading...</p>
       ) : (
-        <>
-          {filteredResources.map((res) => (
+        <section>
+          {/* {filteredResources.map((res) => (
             <article key={res.id}>
               {" "}
               <h2 className="text-white">{res.title}</h2>
             </article>
+          ))} */}
+          {filteredResources.map((res) => (
+            <ResourceCard
+              key={res.id}
+              id={res.id}
+              title={res.title}
+              link={res.link}
+              category={res.category}
+              imgSrc={res.imgSrc}
+            />
           ))}
-        </>
+        </section>
       )}
     </div>
   );
