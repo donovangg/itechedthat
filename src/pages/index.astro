@@ -2,10 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import ResourceContainer from "../components/ResourceContainer";
-
-import { db, Resource } from "astro:db";
+import TabNav from "../components/TabNav.astro";
+import { db, Resource, like } from "astro:db";
 
 const resources = await db.select().from(Resource);
+
+const fundies = await db
+  .select()
+  .from(Resource)
+  .where(like(Resource.category, "Fundamentals"));
 
 interface Props {
   link: string;
@@ -17,6 +22,23 @@ interface Props {
 ---
 
 <Layout title="Fighting Game Resources Ughara">
-  <Hero />
-  <ResourceContainer client:load resources={resources} />
+  <!-- {
+    Array.from(new Set(resources.map((res) => res.category))).map(
+      (category) => (
+        <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden bg-zinc-900 text-white rounded-lg">
+          {category}
+        </button>
+      )
+    )
+  } -->
+  <!-- <TabNav resources={resources} /> -->
+  <!-- <h1>Here is the Fundamentals category filtrered by Astro db</h1> -->
+  {
+    fundies.map((fun) => (
+      <article>
+        <h2 class="text-white">{fun.title}</h2>
+      </article>
+    ))
+  }
+  <!-- <ResourceContainer client:load resources={resources} /> -->
 </Layout>

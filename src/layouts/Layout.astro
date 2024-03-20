@@ -5,6 +5,9 @@ interface Props {
 
 const { title } = Astro.props;
 import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar";
+import Hero from "../components/Hero.astro";
+import TabNav from "../components/TabNav.astro";
 ---
 
 <!doctype html>
@@ -18,8 +21,12 @@ import Navbar from "../components/Navbar.astro";
     <title>{title}</title>
   </head>
   <body class="relative bg-zinc-950 h-full font-sans antialiased">
-    <Navbar />
+    <header>
+      <Navbar />
+      <Hero />
+    </header>
     <main class="relative flex flex-col min-h-screen">
+      <TabNav />
       <slot />
     </main>
   </body>
