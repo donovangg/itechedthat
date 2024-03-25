@@ -1,7 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+let title = "Fundamentals";
+let subheader = "Honest El Fuerte footsies";
+let imgSrc = "bg-fundamentals";
 ---
 
-<Layout title="fundies">
+<PageLayout title={title} subheader={subheader} imgSrc={imgSrc}>
   <h2>Fundies page</h2>
-</Layout>
+</PageLayout>

@@ -4,28 +4,35 @@ const categories = [
   {
     id: 1,
     category: "Fundamentals",
+    subheader: "Skills for every game",
     path: "/fundamentals",
+    imgSrc: "/assets/footsies.gif",
   },
   {
     id: 2,
     category: "Street Fighter",
+    subheader: "They Buffed Ryu",
     path: "/street-fighter",
+    imgSrc: "/assets/capcom.webp",
   },
   {
     id: 3,
     category: "French Bread",
+    subheader: "Lord Kamone",
     path: "/french-bread",
   },
   {
     id: 4,
-    category: "Airdashers",
+    category: "Airdashers/Anime",
+    subheader: "Goodbye Wednesday Train",
+    imgSrc: "/assets/mr-dolphin.webp",
     path: "/airdashers",
   },
 ];
 ---
 
-<nav class="border-2 border-blue-700">
-  <ul class="flex justify-center border-2 w-9/12 mx-auto border-green-600">
+<nav class="py-4">
+  <ul class="flex justify-center gap-2 w-9/12 mx-auto h-full">
     {categories.map((cat) => <Pill path={cat.path} category={cat.category} />)}
   </ul>
 </nav>
