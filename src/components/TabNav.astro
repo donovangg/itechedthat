@@ -1,8 +1,31 @@
 ---
-
+import Pill from "./Pill.astro";
+const categories = [
+  {
+    id: 1,
+    category: "Fundamentals",
+    path: "/fundamentals",
+  },
+  {
+    id: 2,
+    category: "Street Fighter",
+    path: "/street-fighter",
+  },
+  {
+    id: 3,
+    category: "French Bread",
+    path: "/french-bread",
+  },
+  {
+    id: 4,
+    category: "Airdashers",
+    path: "/airdashers",
+  },
+];
 ---
 
-<nav class="border-2 border-green-600 text-white mx-auto">
-  <a href="/street-fighter">SF</a>
-  <a href="/fundamentals">fundies</a>
+<nav class="border-2 border-blue-700">
+  <ul class="flex justify-center border-2 w-9/12 mx-auto border-green-600">
+    {categories.map((cat) => <Pill path={cat.path} category={cat.category} />)}
+  </ul>
 </nav>
