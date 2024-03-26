@@ -1,0 +1,20 @@
+---
+const { title, link, category, imgSrc, id, description } = Astro.props;
+---
+
+<article
+  class="max-w-sm rounded overflow-hidden bg-zinc-800 hover:bg-zinc-700 shadow-lg"
+>
+  <a href={link} target="_blank">
+    <img class="w-full" src={imgSrc} alt={`The resource ${link}`} />
+    <div class="px-6 py-4">
+      <h3 class="font-bold text-neutral-200 text-xl mb-2">{title}</h3>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+        >{category}</span
+      >
+    </div>
+  </a>
+</article>

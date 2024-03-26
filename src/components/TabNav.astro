@@ -32,7 +32,7 @@ const categories = [
 ---
 
 <nav class="py-4">
-  <ul class="flex justify-center gap-2 w-9/12 mx-auto h-full">
+  <ul class="flex flex-wrap justify-center gap-2 w-9/12 mx-auto h-full">
     {categories.map((cat) => <Pill path={cat.path} category={cat.category} />)}
   </ul>
 </nav>
