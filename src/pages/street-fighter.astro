@@ -1,5 +1,12 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import ResourceCard from "../components/ResourceCard.astro";
+import { db, Resource, like } from "astro:db";
+
+const sfResources = await db
+  .select()
+  .from(Resource)
+  .where(like(Resource.category, "Street Fighter"));
 
 let title = "Street Fighter";
 let subheader = "Yun has trouble getting in";
@@ -7,5 +14,22 @@ let imgSrc = "bg-capcom";
 ---
 
 <PageLayout title={title} subheader={subheader} imgSrc={imgSrc}>
-  <h2>SF page</h2>
+  <section
+    class="border-2 w-11/12 mx-auto flex flex-col items-center lg:justify-center gap-4 lg:flex-row lg:w-9/12 md:flex-wrap border-green-700"
+  >
+    {
+      sfResources.map((res) => (
+        <article>
+          <ResourceCard
+            id={res.id}
+            title={res.title}
+            category={res.category}
+            imgSrc={res.imgSrc}
+            link={res.link}
+            description={res.description}
+          />
+        </article>
+      ))
+    }
+  </section>
 </PageLayout>
