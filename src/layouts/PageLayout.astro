@@ -10,6 +10,7 @@ import Navbar from "../components/Navbar.astro";
 import TabNav from "../components/TabNav.astro";
 import PageHeader from "../components/PageHeader.astro";
 import Navigation from "../components/Navigation";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -20,6 +21,7 @@ import Navigation from "../components/Navigation";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
     <title>{title}</title>
   </head>
   <body class="relative bg-zinc-950 h-full font-sans antialiased">
