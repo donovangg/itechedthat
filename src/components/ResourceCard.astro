@@ -39,12 +39,53 @@ const { title, link, category, imgSrc, id, description } = Astro.props;
           {title}
         </h2>
       </a>
-      <a
-        href={link}
-        class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
-      >
-        Check this out
-      </a>
+      <div>
+        <a
+          class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+        >
+          <svg
+            class="text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="29"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href={link}
+          class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+        >
+          <svg
+            width="30"
+            height="29"
+            viewBox="0 0 30 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            ><rect width="30" height="29" rx="3" fill="transparent"></rect><path
+              d="M10.454 7.36396H23.182V20.0919"
+              stroke="white"></path><path
+              d="M23 7.54596L9 21.546"
+              stroke="white"></path></svg
+          >
+        </a>
+      </div>
+      <div class="flex mt-3 justify-start">
+        <p
+          class="bg-neutral-200 rounded-full py-1 px-3 text-sm font-semibold text-gray-700 mr-2 mb-2"
+        >
+          {category}
+        </p>
+      </div>
     </div>
   </article>
 </div>
