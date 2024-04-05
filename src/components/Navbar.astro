@@ -1,5 +1,6 @@
 ---
 import MaxWidthWrapper from "./MaxWidthWrapper.astro";
+import Dropdown from "./Dropdown";
 ---
 
 <nav
@@ -9,6 +10,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper.astro";
     <div
       class="flex h-14 items-center justify-between border-b border-zinc-200"
     >
+    <Dropdown client:only="react"/>
       <a href="/" class="flex z-40 font-semibold"> Ughara </a>
       {/* Links */}
       <div class="hidden items-center space-x-4 sm:flex">
