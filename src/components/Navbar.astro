@@ -10,18 +10,19 @@ import Dropdown from "./Dropdown";
     <div
       class="flex h-14 items-center justify-between border-b border-zinc-200"
     >
-    <Dropdown client:only="react"/>
-      <a href="/" class="flex z-40 font-semibold"> Ughara </a>
+      <a href="/" class="hidden z-40 font-semibold text-white md:flex"> Ughara </a>
       {/* Links */}
-      <div class="hidden items-center space-x-4 sm:flex">
+      <div class="items-center space-x-4 sm:flex">
         <>
           <a class="text-neutral-200" href="/biscuits"> About </a>
           <a class="text-neutral-200" href="/biscuits"> About </a>
           <button
-            class="relative inline-flex h-8 w-full items-center justify-center rounded-md bg-white px-6 font-medium text-gray-950 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
+            class="relative group inline-flex h-8  items-center justify-center rounded-md bg-white px-6 font-medium text-gray-950 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50
+           
+            "
           >
             <div
-              class="absolute -inset-0.5 -z-10 rounded-lg bg-gradient-to-b from-[#c7d2fe] to-[#8678f9] opacity-75 blur"
+              class="absolute -inset-[5px] -z-10 rounded-lg bg-gradient-to-r from-pink-600 to bg-violet-600 opacity-65 blur  group-hover:opacity-100 transition duration-200"
             >
             </div>
             Submit Something!
