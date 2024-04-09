@@ -1,9 +1,9 @@
 ---
 interface Props {
-  title: string;
+  pageTitle: string;
 }
 
-const { title } = Astro.props;
+const { pageTitle } = Astro.props;
 import Navbar from "../components/Navbar.astro";
 import Sidebar from "../components/Sidebar";
 import Hero from "../components/Hero.astro";
@@ -21,7 +21,7 @@ import DropdownContainer from "../components/DropdownContainer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions />
-    <title>{title}</title>
+    <title>{pageTitle}</title>
   </head>
   <body class="relative bg-zinc-950 h-full font-sans antialiased">
     <header>
