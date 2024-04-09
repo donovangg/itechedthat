@@ -2,22 +2,6 @@
 const { title, link, category, imgSrc, id, description } = Astro.props;
 ---
 
-<!-- <article
-  class="max-w-sm rounded overflow-hidden bg-zinc-800 border border-gray-800 p-[1px] backdrop-blur-3xl"
->
-  <a href={a} target="_blank">
-    <img class="w-full" src={imgSrc} alt={`The resource ${a}`} />
-    <div class="px-6 py-4">
-      <h3 class="font-bold text-neutral-200 text-xl mb-2">{title}</h3>
-    </div>
-    <div class="px-6 pt-4 pb-2">
-      <span
-        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-        >{category}</span
-      >
-    </div>
-  </a>
-</article> -->
 <div class="relative selection:bg-pink-600 group">
   <div
     class="absolute -inset-0.5 hover:bg-gradient-to-r from-pink-600 to bg-violet-600 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-200"
@@ -41,10 +25,10 @@ const { title, link, category, imgSrc, id, description } = Astro.props;
       </a>
       <div>
         <a
-          class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+          class="inline-flex items-center py-2 px-3 text-sm cursor-pointer font-medium text-center text-white bg-zinc-600 transition-all duration-300 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
         >
           <svg
-            class="text-gray-800 dark:text-white"
+            class="text-white dark:text-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -63,7 +47,7 @@ const { title, link, category, imgSrc, id, description } = Astro.props;
         </a>
         <a
           href={link}
-          class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+          class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-zinc-600 rounded-lg transition-all duration-300 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
         >
           <svg
             width="30"
