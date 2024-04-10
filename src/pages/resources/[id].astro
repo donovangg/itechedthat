@@ -9,6 +9,7 @@ interface Props {
 }
 
 import { db, Resource, like } from "astro:db";
+import InfoPageLayout from "../../layouts/InfoPageLayout.astro";
 
 export const getStaticPaths = async () => {
   const resources = await db.select().from(Resource);
@@ -31,9 +32,10 @@ const id = Astro.params.id;
 const { link, category, title, imgSrc, description } = Astro.props;
 ---
 
-<div>
+<InfoPageLayout pageTitle={title}>
+  <img src={imgSrc} />
   Welcome thjis is id: {id}
   For the page {title}, this is the description: {description}
   check it out here
   <a href={link} target="_blank">gere</a>
-</div>
+</InfoPageLayout>
