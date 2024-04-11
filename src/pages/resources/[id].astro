@@ -10,7 +10,7 @@ interface Props {
 
 import { db, Resource, like } from "astro:db";
 import InfoPageLayout from "../../layouts/InfoPageLayout.astro";
-
+import { Image } from "astro:assets";
 export const getStaticPaths = async () => {
   const resources = await db.select().from(Resource);
 
@@ -30,6 +30,7 @@ export const getStaticPaths = async () => {
 
 const id = Astro.params.id;
 const { link, category, title, imgSrc, description } = Astro.props;
+import { slide } from "astro:transitions";
 ---
 
 <InfoPageLayout pageTitle={title}>
@@ -43,7 +44,7 @@ const { link, category, title, imgSrc, description } = Astro.props;
       <div class="border-2 border-green-600 pb-10 flex flex-col gap-4 w-11/12 mx-auto lg:flex-row">
         <div class=" bg-zinc-900 relative overflow-hidden  border-gray-800 p-[1px] flex items-center justify-center md:pb-[25%] md:pt-[25%] pt-[50%] pb-[50%] rounded-2xl w-full md:w-1/2 border-4 border-outline border-opacity-15">     
           <div class="absolute w-11/12 rounded-3xl overflow-hidden  shadow-shine bg-transparent bg-opacity-0 ">
-            <img src={imgSrc} class="relative  h-full w-full" width="800" height="800"/>
+            <Image  src={imgSrc}  class="relative  h-full w-full" width="800" height="800" alt={title}/>
           </div>
         </div>
       <div class="border-2 border-orange-600 grid place-items-center">

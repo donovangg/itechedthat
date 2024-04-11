@@ -1,8 +1,9 @@
 ---
 const { title, link, category, imgSrc, id, description } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
-<div class="relative selection:bg-pink-600 group">
+<div class="relative selection:bg-pink-600 group" >
   <div
     class="absolute -inset-0.5 hover:bg-gradient-to-r from-pink-600 to bg-violet-600 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-200"
   >
@@ -12,7 +13,7 @@ const { title, link, category, imgSrc, id, description } = Astro.props;
   >
     <div class="flex-1">
       <a href={link}>
-        <img class="rounded-t-lg w-full" src={imgSrc} alt="" />
+        <Image  class="rounded-t-lg w-full" src={imgSrc} alt={title} inferSize={true} />
       </a>
     </div>
     <div class="flex-1 p-4">
