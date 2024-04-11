@@ -6,7 +6,7 @@ function Dropdown() {
     const activeCategory = window.location.href;
     const category = activeCategory.split("/")[3];
   return (
-    <div className=" border-2 border-orange-600 z-50">
+    <div className="border-t-2 border-pink-700 z-50">
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-white hover:text-violet-500 transition duration-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">

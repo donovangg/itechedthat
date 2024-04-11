@@ -9,14 +9,14 @@ import { Image } from "astro:assets";
   >
   </div>
   <article
-    class="relative max-w-sm flex flex-col rounded-lg bg-zinc-800 border-gray-700 shadow-md"
+    class="relative max-w-sm grid rounded-lg grid-rows-2 bg-zinc-800 border-gray-700 shadow-md max-h-96"
   >
-    <div class="flex-1">
+    <div class="">
       <a href={link}>
-        <Image  class="rounded-t-lg w-full" src={imgSrc} alt={title} inferSize={true} />
+        <img  class="rounded-t-lg object-cover h-52 w-96" src={imgSrc} alt={title} />
       </a>
     </div>
-    <div class="flex-1 p-4">
+    <div class="flex flex-col justify-center p-4">
       <a href={link}>
         <h2
           class="mb-2 text-2xl group-hover:text-gray-100 transition duration font-bold tracking-tight text-gray-100"
