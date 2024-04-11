@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import TabNav from "../components/TabNav.astro";
 import { db, Resource, like } from "astro:db";
 import ResourceCard from "../components/ResourceCard.astro";
 
@@ -17,7 +16,7 @@ interface Props {
 
 <Layout pageTitle="Fighting Game Resources Ughara">
   <section
-    class="border-2 w-11/12 mx-auto flex flex-col items-center lg:justify-center gap-4 lg:flex-row lg:w-9/12 md:flex-wrap border-green-700"
+    class="w-11/12 mx-auto flex flex-col items-center lg:justify-center gap-4 lg:flex-row lg:w-9/12 md:flex-wrap b"
   >
     {
       resources.map((res) => (

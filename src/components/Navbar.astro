@@ -1,16 +1,19 @@
 ---
 import MaxWidthWrapper from "./MaxWidthWrapper.astro";
 import Dropdown from "./Dropdown";
+import { Image } from "astro:assets";
 ---
 
 <nav
-  class="sticky h-14 inset-x-0 z-30 w-full border-b border-gray-300 backdrop-blur-lg transition-all"
+  class="sticky h-20 inset-x-0 z-30 w-full  backdrop-blur-lg transition-all"
 >
   <MaxWidthWrapper>
     <div
-      class="flex h-14 items-center justify-between border-b border-zinc-200"
+      class="flex h-20 items-center justify-between border-b border-zinc-200"
     >
-      <a href="/" class="hidden z-40 font-semibold text-white md:flex"> Ughara </a>
+      <a href="/" class="hidden z-40 font-semibold text-white md:flex">
+      <Image src="/assets/ken-throw.png" class="" alt="logo" height={64} width={64}/>
+      </a>
       {/* Links */}
       <div class="items-center flex justify-center space-x-4 w-full  sm:w-6/12 md:justify-end">
         <>

@@ -8,7 +8,7 @@ export default async function seed() {
       category: "Fundamentals",
       title: "The Fighting Game Glossary",
       imgSrc:
-        "https://qczsiistziidnaavyrgw.supabase.co/storage/v1/object/sign/players/mago-san.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwbGF5ZXJzL21hZ28tc2FuLnBuZyIsImlhdCI6MTcxMDU3MTc0MCwiZXhwIjoxNzQyMTA3NzQwfQ.gJHiKEQq8Zi9lHzbPknqIkYgp_AJMkbsTAbwWdqEfWA&t=2024-03-16T06%3A49%3A00.087Z",
+        "/assets/glossary.png",
       id: 1,
       description:
         "I'm Mago san Kenryo  Hayashi is a Japanese Fighting Games player currently representing GyoGun.",
