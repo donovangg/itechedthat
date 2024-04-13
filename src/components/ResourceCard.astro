@@ -3,7 +3,7 @@ const { title, link, category, imgSrc, id, description } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<div class="relative selection:bg-pink-600 group" >
+<div class="relative selection:bg-pink-600 group">
   <div
     class="absolute -inset-0.5 hover:bg-gradient-to-r from-pink-600 to bg-violet-600 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-200"
   >
@@ -12,19 +12,20 @@ import { Image } from "astro:assets";
     class="relative max-w-sm grid rounded-lg grid-rows-2 bg-zinc-800 border-gray-700 shadow-md max-h-96"
   >
     <div class="">
-      <a href={link}>
-        <img  class="rounded-t-lg object-cover h-52 w-96" src={imgSrc} alt={title} />
-      </a>
+      <img
+        class="rounded-t-lg object-cover h-52 w-96"
+        src={imgSrc}
+        alt={title}
+      />
     </div>
     <div class="flex flex-col justify-center p-4">
-      <a href={link}>
-        <h2
-          class="mb-2 text-2xl group-hover:text-gray-100 transition duration font-bold tracking-tight text-gray-100"
-        >
-          {title}
-        </h2>
-      </a>
-      <div>
+      <h2
+        class="mb-2 text-2xl group-hover:text-gray-100 transition duration font-bold tracking-tight text-gray-100"
+      >
+        {title}
+      </h2>
+
+      <div class="flex gap-2">
         <a
           href={`/resources/${id}`}
           class="inline-flex items-center py-2 px-3 text-sm cursor-pointer font-medium text-center text-white bg-zinc-600 transition-all duration-300 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
@@ -64,6 +65,43 @@ import { Image } from "astro:assets";
               stroke="white"></path></svg
           >
         </a>
+        <a
+          href={link}
+          target="_blank"
+          class="inline-flex items-center py-3 px-4 text-sm font-medium text-center text-white bg-zinc-600 rounded-lg transition-all duration-300"
+          ><div
+            class="relative ml-1 h-5 w-5 overflow-hidden"
+          >
+            <div
+              class="absolute transition-all duration-200 group-hover:-translate-y-5 group-hover:translate-x-4"
+            >
+              <svg
+              width="40"
+              height="40"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                ><path
+                  d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"></path></svg
+              ><svg
+                width="40"
+                height="40"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 -translate-x-4"
+                ><path
+                  d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"></path></svg>
+            </div>
+          </div></a
+        >
       </div>
       <div class="flex mt-3 justify-start">
         <p

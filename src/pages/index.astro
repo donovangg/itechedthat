@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { db, Resource, like } from "astro:db";
 import ResourceCard from "../components/ResourceCard.astro";
+import Card from "../components/Card.astro";
 
 const resources = await db.select().from(Resource);
 
@@ -16,20 +17,16 @@ interface Props {
 
 <Layout pageTitle="Fighting Game Resources Ughara">
   <section
-    class="w-11/12 mx-auto flex flex-col items-center lg:justify-center gap-4 lg:flex-row lg:w-9/12 md:flex-wrap b"
+    class="w-11/12 mx-auto grid grid-cols-1 lg:justify-center gap-4 lg:grid-cols-3 md:grid-cols-2 lg:w-9/12 md:flex-wrap b"
   >
     {
       resources.map((res) => (
-        <article>
-          <ResourceCard
-            id={res.id}
+        <Card       id={res.id}
             title={res.title}
             category={res.category}
             imgSrc={res.imgSrc}
             link={res.link}
-            description={res.description}
-          />
-        </article>
+            description={res.description}/>
       ))
     }
   </section>
