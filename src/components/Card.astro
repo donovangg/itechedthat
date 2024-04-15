@@ -2,11 +2,20 @@
 const { title, link, category, imgSrc, id, description } = Astro.props;
 ---
 
-<article class="flex flex-col">
+<article class="flex flex-col border border-zinc-900 bg-zinc-950/60 rounded-lg hover:scale-105 duration-200 transition-all">
+	<a href={`/resources/${id}`}>
 	<div class="h-48 overflow-hidden">
-		<img src={imgSrc} alt={title} class="w-full h-full object-cover" />
+		<img src={imgSrc} alt={title} class="w-full h-full rounded-t-lg overflow-hidden object-cover" />
 	</div>
-	<div class="flex-auto">
-		<h2 class="text-white">{title}</h2>
+	<div class="flex-auto p-2 flex justify-between">
+		<div>
+			<h2 class="text-white truncate">{title}</h2>
+		</div>
+	<div>
+		<a href={link} target="_blank" class="text-white">asdf</a>
+		<a href={link} target="_blank" class="text-white">asdf</a>
 	</div>
+		
+	</div>
+</a>
 </article>
