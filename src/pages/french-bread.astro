@@ -1,6 +1,6 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
-import ResourceCard from "../components/ResourceCard.astro";
+import Card from "../components/Card.astro";
 import { db, Resource, like } from "astro:db";
 
 const fbResources = await db
@@ -19,16 +19,14 @@ let imgSrc = "bg-bread";
   >
     {
       fbResources.map((res) => (
-        <article>
-          <ResourceCard
-            id={res.id}
-            title={res.title}
-            category={res.category}
-            imgSrc={res.imgSrc}
-            link={res.link}
-            description={res.description}
-          />
-        </article>
+        <Card
+          id={res.id}
+          title={res.title}
+          category={res.category}
+          imgSrc={res.imgSrc}
+          link={res.link}
+          description={res.description}
+        />
       ))
     }
   </section>

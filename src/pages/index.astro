@@ -17,16 +17,18 @@ interface Props {
 
 <Layout pageTitle="Fighting Game Resources Ughara">
   <section
-    class="w-11/12 mx-auto grid grid-cols-1 lg:justify-center gap-4 lg:grid-cols-3 md:grid-cols-2 lg:w-9/12 md:flex-wrap b"
+    class="w-11/12 mx-auto grid grid-cols-1 lg:justify-center gap-4 xl:grid-cols-3 md:grid-cols-2 lg:w-8/12"
   >
     {
       resources.map((res) => (
-        <Card       id={res.id}
-            title={res.title}
-            category={res.category}
-            imgSrc={res.imgSrc}
-            link={res.link}
-            description={res.description}/>
+        <Card
+          id={res.id}
+          title={res.title}
+          category={res.category}
+          imgSrc={res.imgSrc}
+          link={res.link}
+          description={res.description}
+        />
       ))
     }
   </section>
