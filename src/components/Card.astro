@@ -21,7 +21,7 @@ const { title, link, category, imgSrc, id, description } = Astro.props;
         <a
           href={`/resources/${id}`}
           target="_blank"
-          class="text-white hover:text-pink-700"
+          class="text-white hover:text-pink-700 transition-all duration-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ const { title, link, category, imgSrc, id, description } = Astro.props;
         <a
           href={link}
           target="_blank"
-          class="group relative inline-flex items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-200"
+          class="group relative inline-flex items-center justify-center rounded-md px-6 font-medium text-neutral-200 hover:text-pink-700 transition-all duration-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
