@@ -36,24 +36,63 @@ import { slide } from "astro:transitions";
 <InfoPageLayout pageTitle={title}>
   <section>
     <div class="w-11/12 mx-auto my-4">
-      <a href="/" class="flex gap-1 text-neutral-200">
+      <!-- <a href="/" class="flex gap-1 text-neutral-200">
         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#F7F7F7" height="24" width="24" xmlns="http://www.w3.org/2000/svg" style="color: rgb(247, 247, 247);"><path d="M10.78 19.03a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06l6.25-6.25a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L5.81 11.5h14.44a.75.75 0 0 1 0 1.5H5.81l4.97 4.97a.75.75 0 0 1 0 1.06Z"></path></svg>
-        <span>Back it Up</span></a>
+        <span>Back it Up</span></a> -->
+
+      <a
+        href="/"
+        class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200"
+      >
+        <div class="ml-1 transition group-hover:-translate-x-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+            ></path>
+          </svg>
+        </div>
+        <span>Back it Up</span></a
+      >
     </div>
 
-      <div class="border-2 border-green-600 pb-10 flex flex-col gap-4 w-11/12 mx-auto lg:flex-row">
-        <div class=" bg-zinc-900 relative overflow-hidden  border-gray-800 p-[1px] flex items-center justify-center md:pb-[25%] md:pt-[25%] pt-[50%] pb-[50%] rounded-2xl w-full md:w-1/2 border-4 border-outline border-opacity-15">     
-          <div class="absolute w-11/12 rounded-3xl overflow-hidden  shadow-shine bg-transparent bg-opacity-0 ">
-            <Image  src={imgSrc}  class="relative  h-full w-full" width="800" height="800" alt={title}/>
-          </div>
+    <div
+      class="border-2 border-green-600 pb-10 flex flex-col gap-4 w-11/12 mx-auto lg:flex-row"
+    >
+      <div
+        class="bg-zinc-900 relative overflow-hidden border-gray-800 p-[1px] flex items-center justify-center md:pb-[25%] md:pt-[25%] pt-[50%] pb-[50%] rounded-2xl w-full md:w-1/2 border-4 border-outline border-opacity-15"
+      >
+        <div
+          class="absolute w-11/12 rounded-3xl overflow-hidden shadow-shine bg-transparent bg-opacity-0"
+        >
+          <Image
+            src={imgSrc}
+            class="relative h-full w-full"
+            width="800"
+            height="800"
+            alt={title}
+          />
         </div>
+      </div>
       <div class="border-2 border-orange-600 grid place-items-center">
         <div>
           <h1 class="text-neutral-200 text-3xl font-bold border-2">{title}</h1>
           <p class="text-neutral-300 my-4">{description}</p>
-          <a href={link} target="_blank" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">View Source</a>
+          <a
+            href={link}
+            target="_blank"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >View Source</a
+          >
         </div>
-       </div>
       </div>
+    </div>
   </section>
 </InfoPageLayout>
