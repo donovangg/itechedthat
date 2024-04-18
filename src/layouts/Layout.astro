@@ -5,11 +5,11 @@ interface Props {
 
 const { pageTitle } = Astro.props;
 import Navbar from "../components/Navbar.astro";
-import Sidebar from "../components/Sidebar";
 import Hero from "../components/Hero.astro";
 import TabNav from "../components/TabNav.astro";
 import { ViewTransitions } from "astro:transitions";
 import DropdownContainer from "../components/DropdownContainer.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -32,6 +32,7 @@ import DropdownContainer from "../components/DropdownContainer.astro";
       <TabNav />
       <slot />
     </main>
-    <DropdownContainer/>
+    <Footer />
+    <DropdownContainer />
   </body>
 </html>

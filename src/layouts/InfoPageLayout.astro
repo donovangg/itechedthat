@@ -10,6 +10,7 @@ import Hero from "../components/Hero.astro";
 import TabNav from "../components/TabNav.astro";
 import { ViewTransitions } from "astro:transitions";
 import DropdownContainer from "../components/DropdownContainer.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -29,6 +30,7 @@ import DropdownContainer from "../components/DropdownContainer.astro";
     </header>
     <main class="relative flex flex-col min-h-screen">
       <slot />
+      <Footer />
     </main>
   </body>
 </html>
