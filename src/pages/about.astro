@@ -1,3 +1,42 @@
 ---
+import InfoPageLayout from "../layouts/InfoPageLayout.astro";
+import MaxWidthWrapper from "../components/MaxWidthWrapper.astro";
 ---
-The About page
+
+<InfoPageLayout pageTitle="About iTechedThat">
+    <section class="min-h-[85vh] py-12">
+        <MaxWidthWrapper>
+            <div class="grid grid-cols-2">
+                <div>
+                    <div class="pb-12 md:flex md:flex-col">
+                        <h2 class="text-neutral-200 text-4xl inline-block font-bold">About</h2>
+                        <span class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-violet-600 to-pink-600">
+                            iTechedThat
+                        </span>
+                    </div>
+               
+                </div>
+                <div>
+                    <div class="flex flex-col gap-6">
+                        <p class="text-neutral-300 font-semibold text-xl">
+                            Hi I&#39;m Yuukiburry. When I went to locals, I was your
+                            average 1-2er. I needed a lot of help. I looked for any type
+                            of video, Google Doc, wiki or Reddit post that could take me
+                            to the next level. I was done being mediocre. I never did
+                            but I&#39;ve been able to complile a bunch of cool resources
+                            along the way and want to share them with you.
+                        </p>
+                        <p class="text-neutral-300 font-semibold text-xl">
+                            These days it&#39;s hard to find resources if you forget to
+                            bookmark it, or if you&#39;re Twitter feed refreshes. Feel
+                            free to contribute resources that you think would be
+                            helpful.
+                        </p>
+                    </div>
+    
+                </div>
+            </div>
+
+        </MaxWidthWrapper>
+    </section>
+</InfoPageLayout>

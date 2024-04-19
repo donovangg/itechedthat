@@ -1,5 +1,6 @@
 import { defineDb, defineTable, column } from "astro:db";
 
+// add type column?
 const Resource = defineTable({
   columns: {
     id: column.number({

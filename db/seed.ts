@@ -1,6 +1,7 @@
 import { db, Resource } from "astro:db";
 
 // https://astro.build/db/seed
+// add type column?
 export default async function seed() {
   await db.insert(Resource).values([
     {
