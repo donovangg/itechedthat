@@ -64,5 +64,15 @@ export default async function seed() {
       description:
         "I'm Mago san Kenryo  Hayashi is a Japanese Fighting Games player currently representing GyoGun.",
     },
+    {
+      link: "https://youtu.be/PngY2iJRApA?si=cPDWWr6Nl8LXyHq6",
+      category: "French Bread",
+      title: "Uni2 Phonon FF Tutorial",
+      imgSrc:
+        "https://yt3.googleusercontent.com/ytc/AIdro_kp1KKyppF8_kEvgcrPOgNBl91_VYfWc0MVHF0mydbn-A=s176-c-k-c0x00ffffff-no-rj",
+      id: 7,
+      description:
+        "I'm Mago san Kenryo  Hayashi is a Japanese Fighting Games player currently representing GyoGun.",
+    },
   ]);
 }
