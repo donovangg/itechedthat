@@ -1,20 +1,31 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useRef, useState } from "react";
 
-
 function Dropdown() {
-    const activeCategory = window.location.href;
-    const category = activeCategory.split("/")[3];
+  const activeCategory = window.location.href;
+  const category = activeCategory.split("/")[3];
   return (
     <div className="border-t-2 border-pink-700 z-50">
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-white hover:text-violet-500 transition duration-75 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             <div className="flex items-center gap-2">
-              <span className="text-lg">{category === "" ? "Home": category}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-</svg>
+              <span className="text-lg">
+                {category === "" ? "Home" : category}
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-chevron-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                />
+              </svg>
             </div>
           </Menu.Button>
         </div>
@@ -46,13 +57,13 @@ function Dropdown() {
             <div className="px-1 py-1">
               <Menu.Item>
                 {({ active }) => (
-                  <a href="/capcom">
+                  <a href="/street-fighter">
                     <button
                       className={`${
                         active ? "bg-violet-500 text-white" : "text-neutral-200"
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                     >
-                      Capcom
+                      Street Fighter
                     </button>
                   </a>
                 )}
@@ -70,21 +81,6 @@ function Dropdown() {
                   </a>
                 )}
               </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <a href="/3d">
-                    <button
-                      className={`${
-                        active ? "bg-violet-500 text-white" : "text-neutral-200"
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                    >
-                      3D
-                    </button>
-                  </a>
-                )}
-              </Menu.Item>
-            </div>
-            <div className="px-1 py-1">
               <Menu.Item>
                 {({ active }) => (
                   <a href="/french-bread">
