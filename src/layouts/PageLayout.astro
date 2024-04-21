@@ -19,14 +19,20 @@ import DropdownContainer from "../components/DropdownContainer.astro";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={`Resources for ${title}`} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta
+      property="og:image"
+      content="https://qczsiistziidnaavyrgw.supabase.co/storage/v1/object/sign/Resources/ken-throw.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJSZXNvdXJjZXMva2VuLXRocm93LnBuZyIsImlhdCI6MTcxMzY3NzA5MCwiZXhwIjoxNzc2NzQ5MDkwfQ.jTWsZ_fj9eQH1a9GLy2pmKJcwYEoDPipRK0wmieiyNw&t=2024-04-21T05%3A24%3A50.614Z"
+    />
     <ViewTransitions />
     <title>{title}</title>
   </head>
-  <body class="relative bg-zinc-950 h-full font-sans antialiased selection:bg-pink-600">
+  <body
+    class="relative bg-zinc-950 h-full font-sans antialiased selection:bg-pink-600"
+  >
     <header>
       <Navbar />
       <PageHeader title={title} subheader={subheader} imgSrc={imgSrc} />
@@ -34,8 +40,7 @@ import DropdownContainer from "../components/DropdownContainer.astro";
     <main class="relative flex flex-col min-h-screen">
       <TabNav />
       <slot />
-     
     </main>
-    <DropdownContainer/>
+    <DropdownContainer />
   </body>
 </html>
