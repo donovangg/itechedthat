@@ -8,10 +8,10 @@ import { db, Resource, like } from "astro:db";
 const airdashResources = await db
   .select()
   .from(Resource)
-  .where(like(Resource.category, "Airdasher"));
+  .where(like(Resource.category, "Arcsys"));
 
-let title = "Airdashers";
-let subheader = "No Baiken No Buy";
+let title = "Arcsys";
+let subheader = "Goodbye Wednesday Train";
 let imgSrc = "bg-airdasher";
 ---
 
